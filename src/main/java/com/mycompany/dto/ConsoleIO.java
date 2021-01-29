@@ -345,7 +345,7 @@ public class ConsoleIO {
 	}
 
 	public void pressAnyKeyToConitue() {
-		System.out.print("Press any key to continue . . . ");
+		System.out.print("Press enter to continue . . . ");
 		Scanner sc = new Scanner(System.in);
 		sc.nextLine();
 	}

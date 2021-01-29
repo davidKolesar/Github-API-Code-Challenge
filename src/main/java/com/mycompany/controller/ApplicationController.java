@@ -1,45 +1,64 @@
 package com.mycompany.controller;
 
+import java.io.IOException;
+
 import com.mycompany.dto.ConsoleIO;
+import com.mycompany.services.DataSummaryService;
 import com.mycompany.view.DisplayContent;
 
 public class ApplicationController {
 
 	ConsoleIO consoleIO = new ConsoleIO();
 	DisplayContent displayContent = new DisplayContent();
+	GithubController controller = new GithubController();
+	DataSummaryService dataSummaryService = new DataSummaryService();
 
-	public void init() {
+	public void init() throws IOException {
 		displayContent.displayTitleScreen();
 		int userResponse = displayContent.displayMenu();
 		processUserSelection(userResponse);
 	}
 
-	public void processUserSelection(int userResponse) {
+	public void returnToMenu() throws IOException {
+		int userResponse = displayContent.displayMenu();
+		processUserSelection(userResponse);
+	}
+
+	
+	public void processUserSelection(int userResponse) throws IOException {
 
 		switch (userResponse) {
 		case 1:
-			// city ;
+			controller.getJobInformation("boston", "Boston");
+			displayContent.promptMenuReturn();
 			break;
 		case 2:
-			// city ;
+			controller.getJobInformation("san+francisco", "San Francisco");
+			displayContent.promptMenuReturn();
 			break;
 		case 3:
-			// city ;
+			controller.getJobInformation("los+angeles", "Los Angeles");
+			displayContent.promptMenuReturn();
 			break;
 		case 4:
-			// city ;
+			controller.getJobInformation("denver", "Denver");
+			displayContent.promptMenuReturn();
 			break;
 		case 5:
-			// city ;
+			controller.getJobInformation("boulder", "Boulder");
+			displayContent.promptMenuReturn();
 			break;
 		case 6:
-			// city ;
+			controller.getJobInformation("chicago", "Chicago");
+			displayContent.promptMenuReturn();
 			break;
 		case 7:
-			// city ;
+			controller.getJobInformation("new+york", "New York City");
+			displayContent.promptMenuReturn();
 			break;
 		case 8:
-			// city ;
+			controller.getJobInformation("raleigh", "Raleigh");
+			displayContent.promptMenuReturn();
 			break;
 		case 9:
 			displayContent.displayHelp();
