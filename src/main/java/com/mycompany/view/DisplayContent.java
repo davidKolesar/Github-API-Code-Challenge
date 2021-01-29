@@ -46,7 +46,6 @@ public class DisplayContent {
 		consoleIO.displayString("To operate this program, input the number correlating to the city in which you are inquiring and then press the 'enter' key.");
 		consoleIO.displayString("");
 		consoleIO.displayString("Many listings mention more than one programming language. For this reason, you may see percentages that add up beyond 100%. ");
-		consoleIO.pressAnyKeyToConitue();
 	}
 
 	public void displayTotalResults(String city, int totalJobs) {

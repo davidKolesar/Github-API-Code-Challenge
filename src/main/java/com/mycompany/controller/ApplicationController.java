@@ -62,6 +62,7 @@ public class ApplicationController {
 			break;
 		case 9:
 			displayContent.displayHelp();
+			displayContent.promptMenuReturn();
 			break;
 		default:
 			// invalid selection
