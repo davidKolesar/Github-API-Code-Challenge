@@ -22,10 +22,10 @@ public class GithubController {
 		
 		
 	String concatinatedURL = "https://jobs.github.com/positions.json?description=&location=" + cityQuery;
-		URL newYorkURL = new URL(concatinatedURL);
+		URL cityURL = new URL(concatinatedURL);
 
 		String readLine = null;
-		HttpURLConnection connection = (HttpURLConnection) newYorkURL.openConnection();
+		HttpURLConnection connection = (HttpURLConnection) cityURL.openConnection();
 		connection.setRequestMethod("GET");
 		int responseCode = connection.getResponseCode();
 
